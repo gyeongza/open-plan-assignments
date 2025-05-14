@@ -13,7 +13,7 @@
       "path": "../apps/storybook",
     },
     {
-      "name": "packages",
+      "name": "config",
       "path": "../packages",
     },
     {

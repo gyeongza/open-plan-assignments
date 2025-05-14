@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
-import './style.css';
 import { Button } from '@repo/ui';
+import './globals.css';
 
 const App = () => (
   <div>
