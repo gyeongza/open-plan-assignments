@@ -9,6 +9,10 @@
       "path": "../apps/web",
     },
     {
+      "name": "storybook",
+      "path": "../apps/storybook",
+    },
+    {
       "name": "packages",
       "path": "../packages",
     },
