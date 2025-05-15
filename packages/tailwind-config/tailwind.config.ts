@@ -17,6 +17,11 @@ export const config: Config = {
       backgroundColor: {
         default: '#111111',
       },
+      fontSize: {
+        sm: '15px',
+        md: '16px',
+        lg: '28px',
+      },
       screens: {
         mobile: '375px',
         'mobile-max': { max: '767px' },
