@@ -14,17 +14,15 @@ export const config: Config = {
       },
     },
     extend: {
-      colors: {
-        brand: {
-          default: '#111111',
-          hover: 'rgba(17, 17, 17, 0.8)',
-          pressed: 'rgba(17, 17, 17, 0.8)',
-        },
+      backgroundColor: {
+        default: '#111111',
       },
       screens: {
-        'board-mobile': '768px',
-        'board-mobile-max': { max: '767px' },
+        mobile: '375px',
+        'mobile-max': { max: '767px' },
         tablet: '768px',
+        'tablet-max': { max: '1439px' },
+        desktop: '1440px',
       },
     },
   },

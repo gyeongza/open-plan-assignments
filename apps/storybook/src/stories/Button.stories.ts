@@ -1,51 +1,52 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from '@repo/ui/button';
 
-import { Button } from './Button';
-
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: 'Example/Button',
+  title: 'UI/Button',
   component: Button,
   parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
+    layout: 'padded',
   },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+    variant: {
+      control: 'select',
+      options: ['default'],
+      description: '버튼 변형',
+    },
+    size: {
+      control: 'select',
+      options: ['default'],
+      description: '버튼 크기',
+    },
+    className: {
+      control: 'text',
+      description: '추가 CSS 클래스',
+    },
   },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    children: '다음',
+    variant: 'default',
+    size: 'default',
   },
 };
 
-export const Secondary: Story = {
+export const WithCustomClass: Story = {
   args: {
-    label: 'Button',
+    children: '커스텀 스타일 버튼',
+    className: 'bg-blue-500 hover:bg-blue-600',
   },
 };
 
-export const Large: Story = {
+export const FullWidth: Story = {
   args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
+    children: '전체 너비 버튼',
+    className: 'w-full',
   },
 };
