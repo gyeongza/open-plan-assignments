@@ -16,9 +16,9 @@ export const config: Config = {
     extend: {
       colors: {
         brand: {
-          100: '#E6F7FF',
-          500: '#0070F3',
-          900: '#003566',
+          default: '#111111',
+          hover: 'rgba(17, 17, 17, 0.8)',
+          pressed: 'rgba(17, 17, 17, 0.8)',
         },
       },
       screens: {

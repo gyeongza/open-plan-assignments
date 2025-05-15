@@ -1,5 +1,7 @@
 export const Button = () => {
   return (
-    <button className="bg-brand-500 text-white p-2 rounded">Click me</button>
+    <button className="bg-default text-white rounded-xl h-12 p-3 hover:bg-opacity-80 active:bg-opacity-80">
+      Click me
+    </button>
   );
 };
