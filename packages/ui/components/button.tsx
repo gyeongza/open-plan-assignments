@@ -10,8 +10,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          'bg-default text-white hover:bg-opacity-80 active:bg-opacity-80',
+        default: 'bg-default text-white hover:bg-opacity-80 active:bg-opacity-80',
       },
       size: {
         default: 'h-12 rounded-xl p-3',
@@ -21,24 +20,16 @@ const buttonVariants = cva(
       variant: 'default',
       size: 'default',
     },
-  }
+  },
 );
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {}
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, ...props }, ref) => {
-    return (
-      <button
-        className={cn(buttonVariants({ variant, size }), className)}
-        ref={ref}
-        {...props}
-      />
-    );
-  }
-);
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ className, variant, size, ...props }, ref) => {
+  return <button className={cn(buttonVariants({ variant, size }), className)} ref={ref} {...props} />;
+});
 
 Button.displayName = 'Button';
 
