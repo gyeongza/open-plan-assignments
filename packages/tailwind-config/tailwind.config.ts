@@ -2,17 +2,8 @@ import type { Config } from 'tailwindcss';
 import tailwindcssAnimate from 'tailwindcss-animate';
 
 export const config: Config = {
-  content: [
-    'src/**/*.{js,ts,jsx,tsx}',
-    '../../packages/ui/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['src/**/*.{js,ts,jsx,tsx}', '../../packages/ui/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    container: {
-      center: true,
-      screens: {
-        xl: '1280px',
-      },
-    },
     extend: {
       backgroundColor: {
         default: '#111111',
