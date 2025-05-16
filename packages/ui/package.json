@@ -2,7 +2,10 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "exports": {
-    ".": "./index.ts"
+    ".": "./index.ts",
+    "./button": "./components/button.tsx",
+    "./image-skeleton": "./components/image-skeleton.tsx",
+    "./spinner": "./components/spinner.tsx"
   },
   "license": "MIT",
   "scripts": {
