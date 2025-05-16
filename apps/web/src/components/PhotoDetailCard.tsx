@@ -3,6 +3,7 @@ import { ROUTES } from '../routes';
 import { useNavigate } from 'react-router-dom';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { photoApi } from '../api';
+import { ImageSkeleton } from './common/ImageSkeleton';
 
 export default function PhotoDetailCard() {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ export default function PhotoDetailCard() {
   return (
     <div className="flex min-h-screen flex-col items-center gap-5 py-5 tablet:flex-row tablet:gap-10">
       <div className="h-auto w-full">
-        <img className="h-auto w-full rounded-3xl" src={photoDetail?.download_url} alt="photo" />
+        <ImageSkeleton src={photoDetail?.download_url} alt="photo" />
       </div>
       <div className="flex w-full flex-col gap-3">
         <div className="rounded-3xl bg-white p-5">
