@@ -20,6 +20,8 @@ export default function Result() {
 
       return () => clearTimeout(timer);
     }
+
+    return () => {};
   }, [hasViewed, navigate]);
 
   return (

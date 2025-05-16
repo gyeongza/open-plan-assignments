@@ -16,6 +16,8 @@ export function withResultAccessGuard<T extends object>(Component: React.Compone
         const timer = setTimeout(() => setShouldRedirect(true), delay);
         return () => clearTimeout(timer);
       }
+
+      return () => {};
     }, [canAccessResult]);
 
     if (shouldRedirect) {

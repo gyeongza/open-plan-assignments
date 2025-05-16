@@ -23,6 +23,8 @@ export default function Home() {
 
       return () => clearTimeout(timer);
     }
+
+    return () => {};
   }, [hasViewed, navigate]);
 
   const debouncedNavigate = useDebounce(async () => {
