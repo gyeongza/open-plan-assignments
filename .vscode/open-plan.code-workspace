@@ -21,4 +21,10 @@
       "path": "../packages/ui",
     },
   ],
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "bradlc.vscode-tailwindcss",
+    ]
+  }
 }
