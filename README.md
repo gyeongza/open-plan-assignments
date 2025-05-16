@@ -1,5 +1,35 @@
 # 오픈플랜 프론트엔드 과제
 
+## 기본 설정
+
+```
+1. Node.js 18 이상이 설치되어 있어야 합니다
+2. pnpm이 설치되어 있어야 합니다 (설치: `npm install -g pnpm`)
+
+프로젝트 설정
+1. 저장소 클론: `git clone https://github.com/gyeongza/open-plan-assignments.git`
+
+2. 프로젝트 폴더로 이동: `cd open-plan`
+
+3. VS Code에서 워크스페이스 열기: `/open-plan/.vscode/open-plan.code-workspace` 파일 실행
+
+4. 의존성 설치: `pnpm install`
+```
+
+## 개발 서버 실행
+
+```
+1. 웹 애플리케이션 실행
+- web workspace -> pnpm dev
+
+- 기본적으로 http://localhost:5173 에서 실행됩니다
+
+2. 스토리북 실행
+
+- storybook workspace -> pnpm dev
+- 기본적으로 http://localhost:6006 에서 실행됩니다
+```
+
 ## 기술 선택 및 이유
 
 ### Core
@@ -50,3 +80,8 @@
 ### 4. Suspense 및 ErrorBoundary
 
 - Next.js 에서는 Loading이나 Error 파일을 이용하여 해당 레이아웃이나 페이지 단에서 로딩과 에러처리를 할 수 있지만 리액트만 사용하여 구현하였기에 데이터를 불러오는 쪽에서 선언적으로 로딩과 에러를 관리하도록 했습니다.
+
+### 5. 모노레포 구성
+
+- 크게 web, storybook, pakages(config, ui)로 분리했습니다.
+- apps와 packages로 나누어 각각에 필요한 패키지 의존성을 관리하도록 했습니다.
