@@ -2,7 +2,7 @@ import { Button } from '@repo/ui';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../routes';
 import { APPLICANT_NAME } from '../constants';
-import Header from '../components/Header';
+import Header from '../components/common/Header';
 
 export default function Home() {
   const navigate = useNavigate();
