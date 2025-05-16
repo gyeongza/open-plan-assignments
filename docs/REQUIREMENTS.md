@@ -12,7 +12,7 @@
 - [x] 사진 조회 전 route : `.../`, 조회 후 : `/result`
 - [x] 사진 조회 api는 "https://picsum.photos/id/0/info" 을 이용해주세요.
 - [x] 사진 조회 api 통신 후 response를 "/result" 페이지에 전달하는 방식으로 만들어주세요.
-- [ ] github에 Public으로 해당 프로젝트를 올려주세요.
+- [x] github에 Public으로 해당 프로젝트를 올려주세요.
 - [ ] web 워크스페이스를 vercel을 사용해서 배포해주세요.
 - [ ] Github url과 배포 Url을 메일로 회신해주세요.
 
@@ -28,5 +28,5 @@
 - [x] 사진을 조회한 이력없이 `/result`로 이동하는 경우, 1초 뒤 메인 페이지로 이동시켜주세요.
 - [x] 사진 조회 페이지의 배경은 조회한 사진을 이용해서 만들어주세요.
 - [x] 404페이지를 만들고 존재하지 않는 route에 접근 시 노출시켜 주세요.
-- [ ] Read me를 작성해주세요.
+- [x] Read me를 작성해주세요.
 - [x] Eslint, Prettier를 사용해서 코드관리를 해주세요.

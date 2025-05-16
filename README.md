@@ -55,7 +55,7 @@
 
 ## 기능 요구사항
 
-- /docs/REQUIREMENTS.md 참고
+- [REQUIREMENTS.md 참고](https://github.com/gyeongza/open-plan-assignments/blob/main/docs/REQUIREMENTS.md)
 
 ## 고민했던 부분
 
