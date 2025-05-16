@@ -1,14 +1,16 @@
 import { Button } from '@repo/ui';
-import { PhotoGetResponse } from '../types';
 import { ROUTES } from '../routes';
 import { useNavigate } from 'react-router-dom';
+import { useSuspenseQuery } from '@tanstack/react-query';
+import { photoApi } from '../api';
 
-interface PhotoDetailCardProps {
-  photoDetail?: PhotoGetResponse;
-}
-
-export default function PhotoDetailCard({ photoDetail }: PhotoDetailCardProps) {
+export default function PhotoDetailCard() {
   const navigate = useNavigate();
+
+  const { data: photoDetail } = useSuspenseQuery({
+    queryKey: ['photo'],
+    queryFn: () => photoApi.getPhotoDetail('0'),
+  });
 
   const handleGoHomeClick = () => {
     navigate(ROUTES.HOME);
@@ -19,7 +21,6 @@ export default function PhotoDetailCard({ photoDetail }: PhotoDetailCardProps) {
       <div className="h-auto w-full">
         <img className="h-auto w-full rounded-3xl" src={photoDetail?.download_url} alt="photo" />
       </div>
-
       <div className="flex w-full flex-col gap-3">
         <div className="rounded-3xl bg-white p-5">
           <div className="flex flex-col gap-4 tablet:flex-row">
