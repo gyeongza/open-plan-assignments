@@ -2,8 +2,7 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "exports": {
-    ".": "./index.ts",
-    "./button": "./components/button.tsx"
+    ".": "./index.ts"
   },
   "license": "MIT",
   "scripts": {
