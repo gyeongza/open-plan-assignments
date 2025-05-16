@@ -13,8 +13,7 @@
 - [x] 사진 조회 api는 "https://picsum.photos/id/0/info" 을 이용해주세요.
 - [x] 사진 조회 api 통신 후 response를 "/result" 페이지에 전달하는 방식으로 만들어주세요.
 - [x] github에 Public으로 해당 프로젝트를 올려주세요.
-- [ ] web 워크스페이스를 vercel을 사용해서 배포해주세요.
-- [ ] Github url과 배포 Url을 메일로 회신해주세요.
+- [x] web 워크스페이스를 vercel을 사용해서 배포해주세요.
 
 ## 추가 사항 (아래 사항들은 필수가 아니며 여건에 따라 진행해주세요.)
 
