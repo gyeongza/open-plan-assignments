@@ -1,9 +1,8 @@
-import { Button } from '@repo/ui';
+import { Button, ImageSkeleton } from '@repo/ui';
 import { ROUTES } from '../routes';
 import { useNavigate } from 'react-router-dom';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { photoApi } from '../api';
-import { ImageSkeleton } from './common/ImageSkeleton';
 
 export default function PhotoDetailCard() {
   const navigate = useNavigate();
