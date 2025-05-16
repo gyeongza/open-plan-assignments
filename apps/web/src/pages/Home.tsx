@@ -9,8 +9,9 @@ import { usePhotoStore } from '../store/photoStore';
 import { toast } from 'react-toastify';
 export default function Home() {
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(false);
   const { hasViewed } = usePhotoStore();
+  const { allowResultAccess } = usePhotoStore();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (hasViewed) {
@@ -23,8 +24,6 @@ export default function Home() {
       return () => clearTimeout(timer);
     }
   }, [hasViewed, navigate]);
-
-  const { allowResultAccess } = usePhotoStore();
 
   const debouncedNavigate = useDebounce(async () => {
     setIsLoading(true);
