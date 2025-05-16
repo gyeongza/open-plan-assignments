@@ -15,9 +15,7 @@ export const config: Config = {
       },
       screens: {
         mobile: '375px',
-        'mobile-max': { max: '767px' },
         tablet: '768px',
-        'tablet-max': { max: '1439px' },
         desktop: '1440px',
       },
     },
