@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 interface ImageSkeletonProps {
-  src: string | null;
+  src?: string | null;
   alt: string;
   className?: string;
 }
