@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
-import { APPLICANT_NAME } from '../constants';
-import { ROUTES } from '../routes';
+import { APPLICANT_NAME } from '../../constants';
+import { ROUTES } from '../../routes';
 
 export default function Header() {
   const isHome = useLocation().pathname === ROUTES.HOME;
