@@ -6,6 +6,7 @@ import BackgroundLayer from '../components/common/BackgroundLayer';
 import { usePhotoStore } from '../store/photoStore';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../routes';
+import ErrorBoundary from '../components/common/ErrorBoundary';
 
 export default function Result() {
   const { hasViewed } = usePhotoStore();
@@ -25,9 +26,11 @@ export default function Result() {
     <>
       <div className="container relative z-30 mx-auto max-w-screen-desktop px-5">
         <Header />
-        <Suspense fallback={<PhotoDetailCardSkeleton />}>
-          <PhotoDetailCard />
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={<PhotoDetailCardSkeleton />}>
+            <PhotoDetailCard />
+          </Suspense>
+        </ErrorBoundary>
       </div>
       <BackgroundLayer />
     </>
